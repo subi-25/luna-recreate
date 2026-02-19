@@ -21,38 +21,60 @@ const Home = () => {
     return (
         <div className="bg-slate-900 min-h-screen">
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
-                {/* Background Elements */}
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black z-0"></div>
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-indigo/20 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                        alt="Ethereal Nebula Background"
+                        className="w-full h-full object-cover opacity-80"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/90"></div>
+                </div>
 
-                <div className="container mx-auto px-4 z-10 text-center">
+                <div className="container mx-auto px-4 z-10 text-center relative">
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
+                        className="max-w-4xl mx-auto"
                     >
-                        <motion.h2 variants={fadeInUp} className="text-accent-teal uppercase tracking-[0.2em] mb-4 text-sm font-semibold">
-                            Your Evolution
-                        </motion.h2>
-                        <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-serif font-bold text-slate-50 mb-6 leading-tight">
-                            One Phase At A Time
-                        </motion.h1>
-                        <motion.p variants={fadeInUp} className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Compassionate counseling in Texas for individuals, couples, and families.
-                            Discover therapy services that support your evolution.
-                        </motion.p>
-                        <motion.div variants={fadeInUp}>
-                            <a
-                                href="https://lecportal.mahlerhealth.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-indigo to-accent-purple text-white rounded-full text-lg font-medium hover:scale-105 transition-transform shadow-lg shadow-accent-indigo/25"
-                            >
-                                Book Your Consultation
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </a>
+                        <motion.div variants={fadeInUp} className="inline-block mb-6 px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-xl">
+                            <span className="text-blue-200 text-sm font-semibold tracking-[0.2em] uppercase">
+                                Welcome to Luna Evolution
+                            </span>
+                        </motion.div>
+
+                        {/* Glass Card Container for Typography */}
+                        <motion.div variants={fadeInUp} className="bg-slate-900/10 backdrop-blur-sm border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+                                Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">Evolution</span><br />
+                                <span className="text-4xl md:text-6xl italic font-light text-slate-300">One Phase At A Time</span>
+                            </h1>
+
+                            <p className="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light drop-shadow-md">
+                                Compassionate counseling in Texas. A sanctuary for your personal growth, healing, and transformation.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
+                                <a
+                                    href="https://lecportal.mahlerhealth.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-8 py-4 bg-white text-slate-900 rounded-full text-lg font-bold hover:bg-blue-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transform hover:-translate-y-1 flex items-center justify-center"
+                                >
+                                    Start Your Journey
+                                    <ArrowRight className="ml-2 w-5 h-5" />
+                                </a>
+                                <Link
+                                    to="/services"
+                                    className="px-8 py-4 bg-slate-900/50 backdrop-blur-md border border-white/20 text-white rounded-full text-lg font-medium hover:bg-white/10 transition-all flex items-center justify-center"
+                                >
+                                    Explore Phases
+                                </Link>
+                            </div>
                         </motion.div>
                     </motion.div>
                 </div>
