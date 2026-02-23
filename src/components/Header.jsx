@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from './Logo';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,14 +27,14 @@ const Header = () => {
         { name: 'Services', path: '/services' },
         { name: 'Our Team', path: '/our-team' },
         { name: 'Contact Us', path: '/contact-us' },
+        { name: 'Client Portal', path: '/portal-login' },
     ];
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/80 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
-                <Link to="/" className="flex items-center space-x-2 text-2xl font-serif font-bold text-slate-100">
-                    <Moon className="w-8 h-8 text-accent-indigo" />
-                    <span>Luna Evolution</span>
+                <Link to="/" className="flex items-center">
+                    <Logo className="h-10 w-auto" />
                 </Link>
 
                 {/* Desktop Navigation */}

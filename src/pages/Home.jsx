@@ -22,7 +22,7 @@ const Home = () => {
         <div className="bg-slate-900 min-h-screen">
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-                {/* Background Image */}
+                {/* Background Image - High Quality Nebula */}
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
