@@ -48,14 +48,12 @@ const Header = () => {
                             {link.name.toUpperCase()}
                         </Link>
                     ))}
-                    <a
-                        href="https://lecportal.mahlerhealth.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link
+                        to="/portal-login"
                         className="px-6 py-2 bg-gradient-to-r from-accent-indigo to-accent-purple text-white rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
                     >
                         Book Consultation
-                    </a>
+                    </Link>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -86,14 +84,12 @@ const Header = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <a
-                                href="https://lecportal.mahlerhealth.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link
+                                to="/portal-login"
                                 className="block text-center px-6 py-3 bg-gradient-to-r from-accent-indigo to-accent-purple text-white rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
                             >
                                 Book Consultation
-                            </a>
+                            </Link>
                         </nav>
                     </motion.div>
                 )}

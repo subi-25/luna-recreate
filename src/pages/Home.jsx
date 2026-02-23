@@ -59,15 +59,13 @@ const Home = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-                                <a
-                                    href="https://lecportal.mahlerhealth.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <Link
+                                    to="/portal-login"
                                     className="px-8 py-4 bg-white text-slate-900 rounded-full text-lg font-bold hover:bg-blue-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transform hover:-translate-y-1 flex items-center justify-center"
                                 >
                                     Start Your Journey
                                     <ArrowRight className="ml-2 w-5 h-5" />
-                                </a>
+                                </Link>
                                 <Link
                                     to="/services"
                                     className="px-8 py-4 bg-slate-900/50 backdrop-blur-md border border-white/20 text-white rounded-full text-lg font-medium hover:bg-white/10 transition-all flex items-center justify-center"

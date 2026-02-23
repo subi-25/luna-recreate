@@ -34,14 +34,14 @@ const Footer = () => {
                         <h4 className="text-lg font-serif font-medium text-slate-100 mb-6">Resources</h4>
                         <ul className="space-y-3">
                             <li>
-                                <a href="https://lecportal.mahlerhealth.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-accent-teal transition-colors text-sm">
+                                <Link to="/portal-login" className="text-slate-400 hover:text-accent-teal transition-colors text-sm">
                                     Client Portal
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="https://lecportal.mahlerhealth.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-accent-teal transition-colors text-sm">
+                                <Link to="/portal-login" className="text-slate-400 hover:text-accent-teal transition-colors text-sm">
                                     Book Consultation
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
