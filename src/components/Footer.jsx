@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Moon, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
     return (
@@ -8,9 +9,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand */}
                     <div className="col-span-1 md:col-span-1">
-                        <Link to="/" className="flex items-center space-x-2 text-2xl font-serif font-bold text-slate-100 mb-6">
-                            <Moon className="w-6 h-6 text-accent-indigo" />
-                            <span>Luna Evolution</span>
+                        <Link to="/" className="mb-6 block">
+                            <Logo className="h-8" textClassName="text-xl" />
                         </Link>
                         <p className="text-slate-400 text-sm leading-relaxed">
                             Compassionate counseling in Texas for individuals, couples, and families.
